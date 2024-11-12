@@ -1,0 +1,48 @@
+server:
+  port: 8208
+  tomcat:
+    connection-timeout: 7200000
+  forward-headers-strategy: framework
+  servlet:
+      context-path: /api
+
+spring:
+  mvc:
+    async:
+      request-timeout: 7200000
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    name: spring-ai-functions
+
+#Pass API key as environment variable, e.g. -DTOGETHER_AI_API_KEY=your-api-key
+ai:
+  api-key: ${TOGETHER_AI_API_KEY}
+  base-url: https://api.together.xyz/v1
+  model-name: meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo
+  embedding-model-name: togethercomputer/m2-bert-80M-8k-retrieval
+
+#Pass API key as environment variable, e.g. -DQDRANT_API_KEY=your-api-key
+qgrant:
+  grpc-host: ${QDRANT_GRPC_HOST}
+  api-key: ${QDRANT_API_KEY}
+
+#Pass API key as environment variable, e.g. -DTAVILY_API_KEY=your-api-key
+tavily:
+  api-key: ${TAVILY_API_KEY}
+
+#Swagger
+springdoc:
+  api-docs:
+    path: /docs
+
+#Logging levels
+logging:
+  level:
+    root: INFO
+    org.springframework.security: INFO
+    org.springframework.security.authentication: INFO
+    org.springframework.boot: INFO
+    org.springframework.ws: WARN
+    org.springframework.web.socket.config.WebSocketMessageBrokerStats: WARN
+    com.youtube.chat.ai: DEBUG
