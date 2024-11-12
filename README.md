@@ -12,6 +12,10 @@ The AI Video Insights Assistant is a powerful backend service that uses advanced
 
 
 
+https://github.com/user-attachments/assets/c85e4a9a-3e0f-4fbb-95e6-f3e371a74ae9
+
+
+
 
 
 ## Key Features
