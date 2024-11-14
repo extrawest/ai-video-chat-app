@@ -26,6 +26,7 @@ https://github.com/user-attachments/assets/c85e4a9a-3e0f-4fbb-95e6-f3e371a74ae9
 - **Dynamic and User-Friendly API**: Designed with intuitive API, users can smoothly browse collections, select pieces of interest, and read detailed descriptions. The UI ensures that each piece of information is easy to access and visually engaging.
 - **Fallback to Tavily API Search**: For low-relevance document matches, the assistant queries the Tavily API, using the “Include Answer” option to retrieve high-quality answers along with the top 3 related URLs from Tavily results, ensuring that users receive the most comprehensive response available.
 - **Advanced Q&A on Video Content**: Users can submit any question about a video, and the assistant respond using contextually appropriate information derived from the video transcript.
+- **Dual Data Source Configuration for AI Content Retrieval**: This feature enables AI to access information from two distinct data sources, each mapped to a unique identifier for efficient retrieval and context-specific responses.
 
 ## Tech Stack
 
